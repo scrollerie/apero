@@ -1,0 +1,1525 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Thu Jun 06 2024 23:51:27 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="65ef8789ab957ccef94db8e2" data-wf-site="65ef8789ab957ccef94db869">
+<head>
+  <meta charset="utf-8">
+  <title>Apéritif Studio 2024 WIP</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/aperitifstudio.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://use.typekit.net/nox0azp.js" type="text/javascript"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon"><!--  Keep this css code to improve the font quality -->
+  <style>
+  * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+</style>
+  <style>
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+html.lenis {
+  height: auto;
+}
+/*selection*/
+  ::selection {
+  	background: #E8E8E8;
+    color: #121212; 
+    text-shadow: none;
+	}
+</style>
+  <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+  <style>
+.mf-cursor-text{
+font-weight:500;
+color:white;
+}
+.mf-cursor.-text:before{
+opacity:1;
+}
+.mf-cursor:before{
+background:#f8382d;
+}
+</style>
+  <style>
+body {
+	overscroll-behavior: none;
+ }
+</style>
+</head>
+<body class="body">
+  <div class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+/* Prevent all click and hover interaction with an element */
+.pointer-events-off {
+	pointer-events: none;
+}
+/* Enables all click and hover interaction with an element */
+.pointer-events-on {
+  pointer-events: auto;
+}
+/* Create a class of .div-square which maintains a 1:1 dimension of a div */
+.div-square::after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+.margin-0 {
+  margin: 0rem !important;
+}
+.padding-0 {
+  padding: 0rem !important;
+}
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+/* Apply "..." at 100% width */
+.truncate-width { 
+		width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+/* Removes native scrollbar */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+</style>
+    </div>
+    <main class="main-wrapper">
+      <div class="page-wrapper">
+        <div data-animation="default" class="navbar1_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="bdaa4596-dfb2-63d9-4a09-d7a5dcaa9201" role="banner" data-duration="400">
+          <div class="navbar1_container">
+            <a href="#" class="navbar1_logo-link w-nav-brand">
+              <div class="logo-nav">apéritif</div>
+            </a>
+            <nav role="navigation" class="navbar1_menu is-page-height-tablet w-nav-menu">
+              <a href="#Services" class="button-4 w-inline-block">
+                <div class="overflow-hidden">
+                  <div class="text-size-small">Services</div>
+                </div>
+                <div class="button_underline-wrapper">
+                  <div class="button_underline"></div>
+                </div>
+              </a>
+              <a href="#About" class="button-4 w-inline-block">
+                <div class="overflow-hidden">
+                  <div class="text-size-small">About us</div>
+                </div>
+                <div class="button_underline-wrapper">
+                  <div class="button_underline"></div>
+                </div>
+              </a>
+              <a href="#Projects" class="button-4 w-inline-block">
+                <div class="overflow-hidden">
+                  <div class="text-size-small">Work</div>
+                </div>
+                <div class="button_underline-wrapper">
+                  <div class="button_underline"></div>
+                </div>
+              </a>
+              <a href="mailto:hello@aperitifstudio.com?subject=Hi!" class="button-4 w-inline-block">
+                <div class="overflow-hidden">
+                  <div class="text-size-small">Get in touch</div>
+                </div>
+                <div class="button_underline-wrapper">
+                  <div class="button_underline"></div>
+                </div>
+              </a>
+            </nav>
+            <div class="navbar1_menu-button w-nav-button">
+              <div class="menu-icon1">
+                <div class="menu-icon1_line-top"></div>
+                <div class="menu-icon1_line-middle">
+                  <div class="menu-icon_line-middle-inner"></div>
+                </div>
+                <div class="menu-icon1_line-bottom"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <main class="main-wrapper">
+          <header class="section_home_1_hero-header">
+            <div data-w-id="a2a91a50-f2d6-a9a5-dfdd-71c4746262b8" style="-webkit-transform:translate3d(0, -200%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -200%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -200%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -200%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="aperitif-label"><img src="images/labelaperitif.svg" loading="lazy" alt="">
+              <a href="index.html" aria-current="page" class="home-label w-inline-block w--current"></a>
+            </div>
+            <div class="top-trigger"></div>
+            <div data-w-id="daa3b94f-16c6-17be-70e6-ad7a0e3b800b" class="hero-section">
+              <div class="hero-wrap">
+                <div class="container-small hide">
+                  <div class="padding-section-large">
+                    <div class="text-align-center">
+                      <div class="max-width-xlarge align-center">
+                        <div class="margin-bottom margin-small">
+                          <div class="home-headline-text-wrap">
+                            <div data-scroll-delay="0.2" data-scroll="1" data-scroll-speed="-2" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-target="#hero-scroll" class="heading-noverflow _1st">
+                              <h2 class="home-headling-main">turning</h2>
+                            </div>
+                            <div data-scroll-delay="0.1" data-scroll="1" data-scroll-speed="1.75" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-target="#hero-scroll" class="heading-noverflow _2nd">
+                              <h2 class="home-headling-main">potential</h2>
+                            </div>
+                            <div data-scroll-delay="0.2" data-scroll="1" data-scroll-speed="-0.2" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-target="#hero-scroll" class="heading-noverflow">
+                              <h2 class="home-headling-main">into</h2>
+                              <h2 class="home-headling-main _1st">potency</h2>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="text-size-medium">At Aperitif, we specialize in crafting visually captivating and user-friendly websites that leave a lasting impression.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <header class="header-wrap">
+                  <main id="hero-content" data-scroll="1" data-scroll-sticky="1" data-scroll-target="#hero-scroll" class="hero-headline-wrap">
+                    <div class="labels-div">
+                      <div class="text-size-tiny text-style-allcaps">top-shelf  digital assets<br>© 2024</div>
+                      <div class="label-wrap">
+                        <div class="text-size-tiny text-style-allcaps">][</div>
+                        <div class="text-size-tiny text-style-allcaps"> branding </div>
+                        <div class="text-size-tiny text-style-allcaps">][</div>
+                        <div class="text-size-tiny text-style-allcaps">design</div>
+                        <div class="text-size-tiny text-style-allcaps">][</div>
+                        <div class="text-size-tiny text-style-allcaps">development</div>
+                      </div>
+                    </div>
+                    <div class="home-headline-text-wrap-2">
+                      <div data-scroll-delay="0.2" data-scroll="1" data-scroll-speed="-2" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-target="#hero-scroll" class="heading-noverflow _1st">
+                        <h2 class="home-headling-main-2">turning</h2>
+                      </div>
+                      <div data-scroll-delay="0.1" data-scroll="1" data-scroll-speed="1.75" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-target="#hero-scroll" class="heading-noverflow _2nd">
+                        <h2 class="home-headling-main-2">potential</h2>
+                      </div>
+                      <div data-scroll-delay="0.2" data-scroll="1" data-scroll-speed="-0.2" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-target="#hero-scroll" class="heading-noverflow">
+                        <h2 class="home-headling-main-2">into</h2>
+                        <h2 class="home-headling-main-2 _1st">potency</h2>
+                      </div>
+                    </div>
+                    <div class="scroll-cta-wrap">
+                      <div class="scroll-cta-div">
+                        <div class="scroll-cta-text">let&#x27;s scroll</div>
+                        <div class="scroll-cta-dot"></div>
+                      </div>
+                    </div>
+                    <div class="hero-logo-wrap">
+                      <div class="logo-main-div"><img src="images/logo-apt1.svg" loading="lazy" alt=""></div>
+                    </div>
+                  </main>
+                </header>
+              </div>
+            </div>
+          </header>
+          <section class="section_home_2_feature">
+            <div class="img-track">
+              <div data-w-id="b20580c2-9c71-f211-6c32-887cf69302db" class="about-img-wrap">
+                <div data-scroll-delay="0.2" data-scroll="1" data-scroll-speed="-0.75" data-scroll-target="#hero-scroll" class="img01">
+                  <div class="noverflow"><img class="full-img is-s-1" src="images/62eaa58735209b75e4754c5c_fon.jpg" alt="" style="opacity:0" sizes="192px" data-w-id="ba6d66fb-fd04-4892-eed4-90d7c6ecc2d5" loading="lazy" srcset="images/62eaa58735209b75e4754c5c_fon-p-500.jpg 500w, images/62eaa58735209b75e4754c5c_fon-p-800.jpg 800w, images/62eaa58735209b75e4754c5c_fon-p-1080.jpg 1080w, images/62eaa58735209b75e4754c5c_fon.jpg 1500w"><img class="full-img is-s-2" src="images/frmg2.jpg" alt="" style="opacity:0" sizes="192px" data-w-id="ba6d66fb-fd04-4892-eed4-90d7c6ecc2d6" loading="lazy" srcset="images/frmg2-p-500.jpg 500w, images/frmg2.jpg 578w"><img class="full-img is-s-3" src="images/edward-howell-rdJhMyb4Yuc-unsplash-1-1.jpg" alt="" style="opacity:0" sizes="192px" data-w-id="ba6d66fb-fd04-4892-eed4-90d7c6ecc2d7" loading="lazy" srcset="images/edward-howell-rdJhMyb4Yuc-unsplash-1-1-p-500.jpg 500w, images/edward-howell-rdJhMyb4Yuc-unsplash-1-1.jpg 640w"><img src="images/mbilia2-1.jpg" loading="eager" sizes="192px" srcset="images/mbilia2-1-p-500.jpg 500w, images/mbilia2-1.jpg 800w" alt="" class="img-cover"></div>
+                  <div class="color-load"></div>
+                </div>
+                <div data-scroll-delay="0.5" data-scroll="1" data-scroll-speed="1" data-scroll-target="#hero-scroll" class="img02">
+                  <div class="noverflow"><img class="full-img is-s-1" src="images/Frame-47.jpg" alt="" style="opacity:0" sizes="224px" data-w-id="d4b6afe1-4f8f-bffc-4bd1-c3f37bcfe83d" loading="lazy" srcset="images/Frame-47-p-500.jpg 500w, images/Frame-47-p-800.jpg 800w, images/Frame-47-p-1080.jpg 1080w, images/Frame-47.jpg 1500w"><img src="images/fitzza.jpg" loading="lazy" style="opacity:0" data-w-id="d4b6afe1-4f8f-bffc-4bd1-c3f37bcfe83e" alt="" class="full-img is-s-2"><img class="full-img is-s-3" src="images/uvc-mac2-1.jpg" alt="" style="opacity:0" sizes="224px" data-w-id="d4b6afe1-4f8f-bffc-4bd1-c3f37bcfe83f" loading="lazy" srcset="images/uvc-mac2-1-p-500.jpg 500w, images/uvc-mac2-1-p-800.jpg 800w, images/uvc-mac2-1-p-1080.jpg 1080w, images/uvc-mac2-1.jpg 1500w"><img src="images/whiskyglass_1whiskyglass.webp" loading="eager" sizes="224px" srcset="images/whiskyglass_1-p-500.jpeg 500w, images/whiskyglass_1-p-800.jpeg 800w, images/whiskyglass_1-p-1080.jpeg 1080w, images/whiskyglass_1whiskyglass.webp 1200w" alt="" class="img-cover"></div>
+                  <div class="color-load"></div>
+                </div>
+                <div class="img04">
+                  <div class="color-load"></div>
+                  <div class="noverflow"><img class="full-img is-s-1" src="images/Frame-16.jpg" alt="" style="opacity:0" sizes="(max-width: 479px) 96px, 192px" data-w-id="938990d4-146a-9583-153a-827c8ef2a9b8" loading="lazy" srcset="images/Frame-16-p-500.jpg 500w, images/Frame-16-p-800.jpg 800w, images/Frame-16.jpg 1250w"><img class="full-img is-s-2" src="images/Frame-45.jpg" alt="" style="opacity:0" sizes="(max-width: 479px) 96px, 192px" data-w-id="938990d4-146a-9583-153a-827c8ef2a9b9" loading="lazy" srcset="images/Frame-45-p-500.jpg 500w, images/Frame-45-p-800.jpg 800w, images/Frame-45-p-1080.jpg 1080w, images/Frame-45.jpg 1500w"><img class="full-img is-s-3" src="images/andrea-davis-OmXIVhBNBZc-unsplash-1.jpg" alt="" style="opacity:0" sizes="(max-width: 479px) 96px, 192px" data-w-id="938990d4-146a-9583-153a-827c8ef2a9ba" loading="lazy" srcset="images/andrea-davis-OmXIVhBNBZc-unsplash-1-p-500.jpg 500w, images/andrea-davis-OmXIVhBNBZc-unsplash-1.jpg 640w"><img src="images/htfl2.jpg" loading="eager" sizes="(max-width: 479px) 96px, 192px" srcset="images/htfl2-p-500.jpg 500w, images/htfl2-p-800.jpg 800w, images/htfl2.jpg 833w" alt="" class="img-cover"></div>
+                </div>
+                <div data-scroll="1" class="img03"><img src="images/whiskyglass_1whiskyglass.webp" loading="eager" sizes="(max-width: 479px) 30vw, 160px" srcset="images/whiskyglass_1-p-500.jpeg 500w, images/whiskyglass_1-p-800.jpeg 800w, images/whiskyglass_1-p-1080.jpeg 1080w, images/whiskyglass_1whiskyglass.webp 1200w" alt="" class="img-cover">
+                  <div class="color-load"></div>
+                </div>
+                <div data-scroll-delay="" data-scroll="1" data-scroll-speed="0.75" data-scroll-position="top" data-scroll-target="#hero-scroll" class="img05">
+                  <div class="color-load"></div>
+                  <div class="noverflow"><img class="full-img is-s-1" src="images/Frame-45.jpg" alt="" style="opacity:0" sizes="(max-width: 479px) 20vw, 144px" data-w-id="161585bb-55e0-4d0a-2163-73442cb853a9" loading="lazy" srcset="images/Frame-45-p-500.jpg 500w, images/Frame-45-p-800.jpg 800w, images/Frame-45-p-1080.jpg 1080w, images/Frame-45.jpg 1500w"><img class="full-img is-s-2" src="images/62eaa5829f8061726f942fc4_insta-phones-small.jpg" alt="" style="opacity:0" sizes="(max-width: 479px) 20vw, 144px" data-w-id="161585bb-55e0-4d0a-2163-73442cb853aa" loading="lazy" srcset="images/62eaa5829f8061726f942fc4_insta-phones-small-p-500.jpg 500w, images/62eaa5829f8061726f942fc4_insta-phones-small-p-800.jpg 800w, images/62eaa5829f8061726f942fc4_insta-phones-small-p-1080.jpg 1080w, images/62eaa5829f8061726f942fc4_insta-phones-small.jpg 1500w"><img class="full-img is-s-3" src="images/cards.jpg" alt="" style="opacity:0" sizes="(max-width: 479px) 20vw, 144px" data-w-id="161585bb-55e0-4d0a-2163-73442cb853ab" loading="lazy" srcset="images/cards-p-500.jpg 500w, images/cards-p-800.jpg 800w, images/cards-p-1080.jpg 1080w, images/cards-p-1600.jpg 1600w, images/cards.jpg 1750w"><img src="images/Frame-47-1.jpg" loading="eager" sizes="(max-width: 479px) 20vw, 144px" srcset="images/Frame-47-1-p-500.jpg 500w, images/Frame-47-1.jpg 750w" alt="" class="img-cover"></div>
+                </div>
+              </div>
+            </div>
+            <div class="padding-global">
+              <div class="container-large">
+                <div class="padding-top padding-mega">
+                  <div class="padding-section-large">
+                    <div class="w-layout-grid home_2_feature_component">
+                      <div id="w-node-e18a9ca8-d355-d424-947e-063714399aff-f94db8e2"></div>
+                      <div class="home_2_feature_content">
+                        <div class="max-width-large">
+                          <div class="margin-bottom margin-small">
+                            <h3 class="heading-style-h1">We help visionary brands realize their full potential through elegant and powerful design.</h3>
+                          </div>
+                        </div>
+                        <div class="max-width-small">
+                          <p class="text-size-regular">Tailored to small business  needs, we specialise in crafting premium branding and bespoke websites that get your brand heard, tasted and loved. <br></p>
+                        </div>
+                        <div class="margin-top margin-medium">
+                          <div class="button-wrap">
+                            <a href="mailto:hello@aperitifstudio.com?subject=Hi!" class="button-2 is-icon dark-outline w-inline-block">
+                              <div class="clip">
+                                <div class="button-text">
+                                  <div class="text-size-small">Work with us</div>
+                                </div>
+                                <div class="button-text button-text-bottom">
+                                  <div class="text-size-small">Work with us</div>
+                                </div>
+                              </div>
+                              <div class="clip">
+                                <div class="button-icon"><img src="images/Right-arrow-slant---dark.svg" loading="lazy" alt="" class="icon-1x1-tiny"></div>
+                                <div class="button-icon button-icon-bottom"><img src="images/Right-arrow-slant---dark.svg" loading="lazy" alt="" class="icon-1x1-tiny"></div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="section-marquee">
+            <div class="marquee-intro">
+              <div class="marquee-wrap">
+                <div class="marquee">
+                  <div class="marquee-content scroll"><img src="images/tools2.svg" loading="lazy" alt="" class="tools"><img src="images/tools2.svg" loading="lazy" alt="" class="tools"><img src="images/tools2.svg" loading="lazy" alt="" class="tools"></div>
+                  <div class="marquee-content scroll"><img src="images/tools2.svg" loading="lazy" alt="" class="tools"><img src="images/tools2.svg" loading="lazy" alt="" class="tools"><img src="images/tools2.svg" loading="lazy" alt="" class="tools"></div>
+                  <div class="w-embed">
+                    <style>
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+.scroll {
+  animation: scroll 70s linear infinite;
+}
+.reverse {
+  animation-direction: reverse;
+}
+</style>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section id="Services" class="section_home_3_services">
+            <div class="padding-global">
+              <div class="container-large">
+                <div class="padding-section-large">
+                  <div class="w-layout-grid home_3_services_component">
+                    <div class="home_3_services_content-left"></div>
+                    <div class="home_3_services_content-right">
+                      <div class="w-layout-grid home_3_services_item-list">
+                        <div id="w-node-bdaa4596-dfb2-63d9-4a09-d7a5dcaa925f-f94db8e2" class="home_3_services_item">
+                          <div class="home_3_services_item-text-wrapper">
+                            <div class="margin-bottom margin-xsmall">
+                              <h6 class="text-size-tiny text-style-allcaps">( services )</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="w-node-bdaa4596-dfb2-63d9-4a09-d7a5dcaa9268-f94db8e2" class="home_3_services_item">
+                          <div data-w-id="bdaa4596-dfb2-63d9-4a09-d7a5dcaa926b" class="home_3_services_item-text-wrapper">
+                            <div class="margin-bottom margin-xsmall">
+                              <div class="accordion-top">
+                                <div class="service-icon-div">
+                                  <div style="-webkit-transform:translate3d(0, 0px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="icon-dot mkt"></div>
+                                  <div style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="icon-dot mkt0"></div>
+                                </div>
+                                <div class="accordion-top-wrap">
+                                  <div class="heading-style-h3">Branding &amp; Strategy</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="max-width-medium">
+                                <p>Every brand has its unique story. Just like homo sapiens, your business needs a language to express itself. It&#x27;s not just a logo but a multitutde of experiences that draw customers into your world. Through research and human-centred insights, we&#x27;ll help you discover, and distill the foundations for meaningful connection with your customers.<br></p>
+                              </div>
+                            </div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="service-wrap">
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">Brand positioning</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">competitive analysis</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">voice &amp; tone</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">naming</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">content strategy</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">brand innovation</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">design audits</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="margin-bottom">
+                              <div class="line-divider"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-w-id="3dee3e41-bc44-3d90-117d-44c83b4bf383" class="w-layout-grid home_3_services_item-list">
+                        <div id="w-node-_3dee3e41-bc44-3d90-117d-44c83b4bf384-f94db8e2" class="home_3_services_item">
+                          <div class="home_3_services_item-text-wrapper"></div>
+                        </div>
+                        <div id="w-node-_3dee3e41-bc44-3d90-117d-44c83b4bf389-f94db8e2" class="home_3_services_item">
+                          <div data-w-id="3dee3e41-bc44-3d90-117d-44c83b4bf38a" class="home_3_services_item-text-wrapper">
+                            <div class="margin-bottom margin-xsmall">
+                              <div class="accordion-top-2">
+                                <div class="service-icon-div-2">
+                                  <div style="-webkit-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="icon-dot dsgn"></div>
+                                  <div style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="icon-dot dsgn2"></div>
+                                </div>
+                                <div class="accordion-top-wrap">
+                                  <div class="heading-style-h3">Bespoke design</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="max-width-medium">
+                                <p>Stand out, be remembered, drive ROI. High-end design is a strategic tool, which moves your business forward. We mix and match typography, layout, motion, and color to achieve a perfect balance between aesthetics and functionality. <br></p>
+                              </div>
+                            </div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="service-wrap">
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">visual brand identity</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">logo design</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">art direction</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">ux/ui design</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">interaction design</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">marketing collateral</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="margin-bottom">
+                              <div class="line-divider"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-w-id="e42b82ab-29ed-1193-f2bb-eea9510fce63" class="w-layout-grid home_3_services_item-list">
+                        <div id="w-node-e42b82ab-29ed-1193-f2bb-eea9510fce64-f94db8e2" class="home_3_services_item">
+                          <div class="home_3_services_item-text-wrapper"></div>
+                        </div>
+                        <div id="w-node-e42b82ab-29ed-1193-f2bb-eea9510fce66-f94db8e2" class="home_3_services_item">
+                          <div data-w-id="e42b82ab-29ed-1193-f2bb-eea9510fce67" class="home_3_services_item-text-wrapper">
+                            <div class="margin-bottom margin-xsmall">
+                              <div class="accordion-top-2">
+                                <div class="service-icon-div-3">
+                                  <div style="-webkit-transform:translate3d(0, 30px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="icon-dot dev1"></div>
+                                  <div class="icon-dot dev2"></div>
+                                  <div style="-webkit-transform:translate3d(0, -30px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -30px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -30px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -30px, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="icon-dot dev3"></div>
+                                </div>
+                                <div class="accordion-top-wrap-2">
+                                  <div class="heading-style-h3">Development</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="max-width-medium">
+                                <p>Engage, delight, and convert. We craft dynamic and responsive websites tailor-made to fully align with strategic goals and needs of your business. Leveraging the power of newest low-code software and tools, we’re able to significantly reduce development time, thus also your budget. Get ready to roll within weeks, not months.</p>
+                              </div>
+                            </div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="service-wrap">
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">low-code development</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">site maintenance</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">cms</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">ecommerce</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">responsive design</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">api/integrations</div>
+                                </div>
+                                <div class="service-block">
+                                  <div class="text-size-tiny text-style-allcaps">page speed optimization</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="margin-bottom">
+                              <div class="line-divider"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="Projects" class="section_home_4_portfolio-list">
+            <div class="padding-global">
+              <div class="container-large">
+                <div class="padding-section-large">
+                  <div class="margin-bottom margin-xxlarge">
+                    <div class="text-align-center">
+                      <div class="projects-heading-grid">
+                        <div class="text-size-tiny">( &#x27;22-24 )</div>
+                        <div class="wrap-horizontal">
+                          <p class="text-size-small">Portfolio</p>
+                          <h2 class="heading-style-h2 heightout">Selected works</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="home_4_portfolio-list_component">
+                    <div class="home_4_portfolio-list_list-wrapper">
+                      <div class="home_4_portfolio-list_list">
+                        <div class="home_4_portfolio-list_item">
+                          <a href="#" class="home_4_portfolio-list_tag-item main w-inline-block">
+                            <div class="home_4_portfolio-list_image-wrapper">
+                              <div data-w-id="6dc187c5-205a-aa05-0ff3-99120ea5948c" style="opacity:1" class="proj-img-wrap"><img srcset="images/Frame-24-1-p-500.jpg 500w, images/Frame-24-1-p-800.jpg 800w, images/Frame-24-1.jpg 1250w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" src="images/Frame-24-1.jpg" alt="" class="home_4_portfolio-list_image1"></div>
+                              <div class="home_4_portfolio-list_title-wrapper tags">
+                                <div class="margin-bottom margin-xxsmall">
+                                  <div class="home_4_portfolio-list_tag-list">
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Branding</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>User Experience</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Web Design</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="project-gif-wrap"><img src="images/Frame-23-1.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/Frame-23-1-p-500.jpg 500w, images/Frame-23-1-p-800.jpg 800w, images/Frame-23-1.jpg 1250w" alt="" class="project-img _6"><img src="images/Frame-19.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/Frame-19-p-500.jpg 500w, images/Frame-19-p-800.jpg 800w, images/Frame-19-p-1080.jpg 1080w, images/Frame-19.jpg 1250w" alt="" class="project-img _5"><img src="images/htfl2.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/htfl2-p-500.jpg 500w, images/htfl2-p-800.jpg 800w, images/htfl2.jpg 833w" alt="" class="project-img _4"><img srcset="images/Frame-24-1-p-500.jpg 500w, images/Frame-24-1-p-800.jpg 800w, images/Frame-24-1.jpg 1250w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" src="images/Frame-24-1.jpg" alt="" class="home_4_portfolio-list_image2"></div>
+                            </div>
+                            <div class="home_4_portfolio-list_title-wrapper">
+                              <div class="margin-top">
+                                <div class="text-size-regular">Hospitality, UK</div>
+                              </div>
+                              <div class="margin-top">
+                                <div class="text-size-regular">no.4241 //Hearthfell</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="home_4_portfolio-list_item">
+                          <a href="#" class="home_4_portfolio-list_tag-item main w-inline-block">
+                            <div data-w-id="c5b623b4-f9dd-5acb-856e-b082635f6c15" class="home_4_portfolio-list_image-wrapper">
+                              <div style="opacity:1" class="proj-img-wrap"><img srcset="images/uvc1-p-500.jpg 500w, images/uvc1-p-800.jpg 800w, images/uvc1.jpg 1000w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" src="images/uvc1.jpg" alt="" class="home_4_portfolio-list_image2"></div>
+                              <div class="home_4_portfolio-list_title-wrapper tags">
+                                <div class="margin-bottom margin-xxsmall">
+                                  <div class="home_4_portfolio-list_tag-list">
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Branding</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>User Experience</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Web Design</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="project-gif-wrap"><img src="images/Frame-45.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/Frame-45-p-500.jpg 500w, images/Frame-45-p-800.jpg 800w, images/Frame-45-p-1080.jpg 1080w, images/Frame-45.jpg 1500w" alt="" class="project-img _6"><img src="images/62e3d420bad33c83a84bd022_phone.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/62e3d420bad33c83a84bd022_phone-p-500.jpg 500w, images/62e3d420bad33c83a84bd022_phone-p-800.jpg 800w, images/62e3d420bad33c83a84bd022_phone-p-1080.jpg 1080w, images/62e3d420bad33c83a84bd022_phone.jpg 1500w" alt="" class="project-img _5"><img src="images/6308f8d25a78500d8761f663_uvc-macs2.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/6308f8d25a78500d8761f663_uvc-macs2-p-500.jpg 500w, images/6308f8d25a78500d8761f663_uvc-macs2-p-800.jpg 800w, images/6308f8d25a78500d8761f663_uvc-macs2-p-1080.jpg 1080w, images/6308f8d25a78500d8761f663_uvc-macs2.jpg 1500w" alt="" class="project-img _4"><img src="images/ipads-uvc-2.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/ipads-uvc-2-p-500.jpg 500w, images/ipads-uvc-2-p-800.jpg 800w, images/ipads-uvc-2-p-1080.jpg 1080w, images/ipads-uvc-2.jpg 1500w" alt="" class="project-img _3"><img src="images/uvc-mac2-1.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/uvc-mac2-1-p-500.jpg 500w, images/uvc-mac2-1-p-800.jpg 800w, images/uvc-mac2-1-p-1080.jpg 1080w, images/uvc-mac2-1.jpg 1500w" alt="" class="project-img _2"><img src="images/Cease---Branding.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" srcset="images/Cease---Branding-p-500.jpg 500w, images/Cease---Branding-p-800.jpg 800w, images/Cease---Branding.jpg 1000w" alt="" class="project-img _1"><img srcset="images/uvc1-p-500.jpg 500w, images/uvc1-p-800.jpg 800w, images/uvc1.jpg 1000w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, 45vw" src="images/uvc1.jpg" alt="" class="home_4_portfolio-list_image2"></div>
+                            </div>
+                            <div class="home_4_portfolio-list_title-wrapper">
+                              <div class="margin-top">
+                                <div class="text-size-regular">Manufacturing, Poland</div>
+                              </div>
+                              <div class="margin-top">
+                                <div class="text-size-regular">no. 02214 //Cease</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="home_4_portfolio-list_list _2ndrow">
+                        <div class="home_4_portfolio-list_item">
+                          <a href="#" class="home_4_portfolio-list_tag-item main w-inline-block">
+                            <div class="home_4_portfolio-list_image-wrapper">
+                              <div data-w-id="4b0f7b97-9db8-757a-b31e-434ce0b3aa59" style="opacity:1" class="proj-img-wrap"><img srcset="images/mbilia2-1-p-500.jpg 500w, images/mbilia2-1.jpg 800w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 32vw, 31vw" src="images/mbilia2-1.jpg" alt="" class="home_4_portfolio-list_image4"></div>
+                              <div class="home_4_portfolio-list_title-wrapper tags">
+                                <div class="margin-bottom margin-xxsmall">
+                                  <div class="home_4_portfolio-list_tag-list">
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Branding</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>User Experience</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Web Design</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="project-gif-wrap"><img srcset="images/mblia1-1-p-500.jpg 500w, images/mblia1-1.jpg 800w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 32vw, 31vw" src="images/mblia1-1.jpg" alt="" class="home_4_portfolio-list_image2"></div>
+                            </div>
+                            <div class="home_4_portfolio-list_title-wrapper">
+                              <div class="margin-top">
+                                <div class="text-size-regular">Furniture, the Netherlands</div>
+                              </div>
+                              <div class="margin-top">
+                                <div class="text-size-regular">no. 1204 //Formwerk</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="home_4_portfolio-list_item">
+                          <a href="#" class="home_4_portfolio-list_tag-item main w-inline-block">
+                            <div data-w-id="e7b56612-d161-e6df-1804-248a8d578ca1" class="home_4_portfolio-list_image-wrapper">
+                              <div style="opacity:1" class="proj-img-wrap"><img srcset="images/62eaa58735209b75e4754c5c_fon-p-500.jpg 500w, images/62eaa58735209b75e4754c5c_fon-p-800.jpg 800w, images/62eaa58735209b75e4754c5c_fon-p-1080.jpg 1080w, images/62eaa58735209b75e4754c5c_fon.jpg 1500w" loading="lazy" sizes="(max-width: 479px) 92vw, 31vw" src="images/62eaa58735209b75e4754c5c_fon.jpg" alt="" class="home_4_portfolio-list_image3"></div>
+                              <div class="home_4_portfolio-list_title-wrapper tags">
+                                <div class="margin-bottom margin-xxsmall">
+                                  <div class="home_4_portfolio-list_tag-list">
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Branding</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>User Experience</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Web Design</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="project-gif-wrap"><img src="images/cards_1.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, 31vw" srcset="images/cards_1-p-500.jpg 500w, images/cards_1-p-800.jpg 800w, images/cards_1-p-1080.jpg 1080w, images/cards_1.jpg 1500w" alt="" class="project-img _6"><img src="images/62eaa5829f8061726f942fc4_insta-phones-small.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, 31vw" srcset="images/62eaa5829f8061726f942fc4_insta-phones-small-p-500.jpg 500w, images/62eaa5829f8061726f942fc4_insta-phones-small-p-800.jpg 800w, images/62eaa5829f8061726f942fc4_insta-phones-small-p-1080.jpg 1080w, images/62eaa5829f8061726f942fc4_insta-phones-small.jpg 1500w" alt="" class="project-img _5"><img src="images/Frame-43.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, 31vw" srcset="images/Frame-43-p-500.jpg 500w, images/Frame-43-p-800.jpg 800w, images/Frame-43-p-1080.jpg 1080w, images/Frame-43.jpg 1500w" alt="" class="project-img _4"><img src="images/62eac615e7c024a4161e9659_girll.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, 31vw" srcset="images/62eac615e7c024a4161e9659_girll-p-500.jpg 500w, images/62eac615e7c024a4161e9659_girll-p-800.jpg 800w, images/62eac615e7c024a4161e9659_girll-p-1080.jpg 1080w, images/62eac615e7c024a4161e9659_girll.jpg 1500w" alt="" class="project-img _3"><img src="images/Bez-nazwy-2.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, 31vw" srcset="images/Bez-nazwy-2-p-500.jpg 500w, images/Bez-nazwy-2.jpg 750w" alt="" class="project-img _2"><img srcset="images/stamp-1-p-500.jpg 500w, images/stamp-1-p-800.jpg 800w, images/stamp-1-p-1080.jpg 1080w, images/stamp-1.jpg 1500w" loading="lazy" sizes="(max-width: 479px) 92vw, 31vw" src="images/stamp-1.jpg" alt="" class="home_4_portfolio-list_image2"></div>
+                            </div>
+                            <div class="home_4_portfolio-list_title-wrapper">
+                              <div class="margin-top">
+                                <div class="text-size-regular">Fashion, Spain</div>
+                              </div>
+                              <div class="margin-top">
+                                <div class="text-size-regular">no. 01503 //Carees</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="home_4_portfolio-list_item">
+                          <a href="#" class="home_4_portfolio-list_tag-item main w-inline-block">
+                            <div class="home_4_portfolio-list_image-wrapper"><img srcset="images/mm1o-p-500.jpg 500w, images/mm1o-p-800.jpg 800w, images/mm1o.jpg 833w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 36vw, 31vw" src="images/mm1o.jpg" alt="" class="home_4_portfolio-list_image1">
+                              <div class="home_4_portfolio-list_title-wrapper tags">
+                                <div class="margin-bottom margin-xxsmall">
+                                  <div class="home_4_portfolio-list_tag-list">
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Branding</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>User Experience</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Web Design</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="home_4_portfolio-list_title-wrapper">
+                              <div class="margin-top">
+                                <div class="text-size-regular">Manufacturing, Poland</div>
+                              </div>
+                              <div class="margin-top">
+                                <div class="text-size-regular">no. 0513 //MyMethd</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="home_4_portfolio-list_list _3rdrow">
+                        <div class="home_4_portfolio-list_item">
+                          <a href="#" class="home_4_portfolio-list_tag-item main w-inline-block">
+                            <div data-w-id="ba3dc0d0-4e10-1238-0024-86e1bab023a7" class="home_4_portfolio-list_image-wrapper">
+                              <div style="opacity:1" class="proj-img-wrap"><img srcset="images/62efca2ddd39ffb196006f2b_Window-Sign-Logo-Mockup-1-p-500.jpg 500w, images/62efca2ddd39ffb196006f2b_Window-Sign-Logo-Mockup-1.jpg 750w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 54vw, 55vw" src="images/62efca2ddd39ffb196006f2b_Window-Sign-Logo-Mockup-1.jpg" alt="" class="home_4_portfolio-list_image2 _2nd"></div>
+                              <div class="home_4_portfolio-list_title-wrapper tags">
+                                <div class="margin-bottom margin-xxsmall">
+                                  <div class="home_4_portfolio-list_tag-list">
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Branding</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>User Experience</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Web Design</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="project-gif-wrap"><img src="images/Frame-46-1.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 54vw, 55vw" srcset="images/Frame-46-1-p-500.jpg 500w, images/Frame-46-1.jpg 750w" alt="" class="project-img _6"><img src="images/Frame-47-1.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 54vw, 55vw" srcset="images/Frame-47-1-p-500.jpg 500w, images/Frame-47-1.jpg 750w" alt="" class="project-img _5"><img src="images/print-ck-1.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 54vw, 55vw" srcset="images/print-ck-1-p-500.jpg 500w, images/print-ck-1.jpg 750w" alt="" class="project-img _4"><img src="images/62efca280b52a64458de5185_Urban-City-Billboard-Mockup-15-1.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 54vw, 55vw" srcset="images/62efca280b52a64458de5185_Urban-City-Billboard-Mockup-15-1-p-500.jpg 500w, images/62efca280b52a64458de5185_Urban-City-Billboard-Mockup-15-1.jpg 750w" alt="" class="project-img _3"><img src="images/Frame-47-1.jpg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 54vw, 55vw" srcset="images/Frame-47-1-p-500.jpg 500w, images/Frame-47-1.jpg 750w" alt="" class="project-img _2"><img srcset="images/Frame-50-1-p-500.jpg 500w, images/Frame-50-1.jpg 750w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 54vw, 55vw" src="images/Frame-50-1.jpg" alt="" class="home_4_portfolio-list_image2"></div>
+                            </div>
+                            <div class="home_4_portfolio-list_title-wrapper">
+                              <div class="margin-top">
+                                <div class="text-size-regular">Real Estate, the Netherlands</div>
+                              </div>
+                              <div class="margin-top">
+                                <div class="text-size-regular">no. 2102 //Christian Koonings</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="home_4_portfolio-list_item">
+                          <a href="#" class="home_4_portfolio-list_tag-item main w-inline-block">
+                            <div data-w-id="ba3dc0d0-4e10-1238-0024-86e1bab02390" class="home_4_portfolio-list_image-wrapper">
+                              <div style="opacity:1" class="proj-img-wrap"><img srcset="images/MacBook-Pro-14_---14-1-p-500.jpg 500w, images/MacBook-Pro-14_---14-1-p-800.jpg 800w, images/MacBook-Pro-14_---14-1-p-1080.jpg 1080w, images/MacBook-Pro-14_---14-1.jpg 1638w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 36vw, (max-width: 991px) 37vw, 36vw" src="images/MacBook-Pro-14_---14-1.jpg" alt="" class="home_4_portfolio-list_image1 _2nd"></div>
+                              <div class="home_4_portfolio-list_title-wrapper tags">
+                                <div class="margin-bottom margin-xxsmall">
+                                  <div class="home_4_portfolio-list_tag-list">
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Branding</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>User Experience</div>
+                                    </div>
+                                    <div class="home_4_portfolio-list_tag-item">
+                                      <div>Web Design</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="project-gif-wrap"><img srcset="images/frmg2-p-500.jpg 500w, images/frmg2.jpg 578w" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 36vw, (max-width: 991px) 37vw, 36vw" src="images/frmg2.jpg" alt="" class="home_4_portfolio-list_image1 _2nd"></div>
+                            </div>
+                            <div class="home_4_portfolio-list_title-wrapper">
+                              <div class="margin-top">
+                                <div class="text-size-regular">Interior Design, Poland</div>
+                              </div>
+                              <div class="margin-top">
+                                <div class="text-size-regular">no. 021421 //Framuga</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="margin-top margin-xsmall"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="About" data-w-id="bdaa4596-dfb2-63d9-4a09-d7a5dcaa92eb" class="section_home_5_layout">
+            <div class="padding-global">
+              <div class="container-large">
+                <div class="padding-section-large">
+                  <div class="w-layout-grid home_5_layout_component">
+                    <div id="w-node-bdaa4596-dfb2-63d9-4a09-d7a5dcaa92f0-f94db8e2" class="home_5_layout_content-left"></div>
+                    <div class="home_5_layout_content-right">
+                      <div class="margin-bottom margin-medium">
+                        <p class="text-size-medium text-color-white">Apéritif is a digital production studio based in London, UK. We&#x27;re a small and nimble team united through the simple and beautiful things in life: champagne, moscow mules and design.</p>
+                      </div>
+                      <div class="w-layout-grid home_5_layout_item-list">
+                        <div class="home_5_layout_text-wrapper">
+                          <div class="margin-bottom margin-xxsmall">
+                            <div class="heading-style-h2 text-color-white">50%</div>
+                          </div>
+                          <div class="text-color-white">potent digital asets C 2024</div>
+                        </div>
+                        <div class="home_5_layout_text-wrapper">
+                          <div class="margin-bottom margin-xxsmall">
+                            <div class="heading-style-h2 text-color-white">50%</div>
+                          </div>
+                          <div class="text-color-white">blend of straegy, creativity and technology<br>- stir to ignite</div>
+                        </div>
+                      </div>
+                      <div class="label-main-div"><img src="images/aptflabel2.svg" loading="lazy" alt="" class="image-4"></div>
+                    </div>
+                  </div>
+                  <div data-w-id="f012bfb5-2a47-a580-5429-8c2cd2748510" class="marquee-wrap about">
+                    <div class="marquee">
+                      <div class="showcase_marquee_track">
+                        <div class="showcase_marquee_list">
+                          <div class="showcase_marquee_flex">
+                            <div class="mq-wrap">
+                              <div class="mq-div"><img src="images/abus.svg" loading="lazy" alt="" class="abus1"></div>
+                              <div class="mq-div star">
+                                <div class="dash"></div>
+                              </div>
+                              <div class="mq-div"><img src="images/abus2.svg" loading="lazy" alt="" class="abus1"></div>
+                              <div class="mq-div star">
+                                <div class="dash"></div>
+                              </div>
+                            </div>
+                            <div class="mq-wrap">
+                              <div class="mq-div"><img src="images/abus.svg" loading="lazy" alt="" class="abus1"></div>
+                              <div class="mq-div star">
+                                <div class="dash"></div>
+                              </div>
+                              <div class="mq-div"><img src="images/abus2.svg" loading="lazy" alt="" class="abus1"></div>
+                              <div class="mq-div star">
+                                <div class="dash"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home_5_layout_background-image-wrapper">
+              <div class="image-overlay-layer"></div><img src="images/apero-drink-1.jpg" loading="lazy" sizes="100vw" srcset="images/apero-drink-1-p-500.jpg 500w, images/apero-drink-1-p-800.jpg 800w, images/apero-drink-1-p-1080.jpg 1080w, images/apero-drink-1.jpg 1200w" alt="" class="home_5_layout_background-image">
+            </div>
+          </section>
+          <section class="section_home_6_layout">
+            <div class="padding-global">
+              <div class="container-large">
+                <div class="padding-section-large">
+                  <div class="w-layout-grid home_2_feature_component">
+                    <div id="w-node-_43455bb7-1d9d-575d-9c55-94a440d2611b-f94db8e2"></div>
+                    <div class="home_2_feature_content">
+                      <div class="max-width-large">
+                        <div class="margin-bottom margin-small">
+                          <div data-w-id="6ec4dc34-652c-97e4-c935-433741a32e04" class="heading-div">
+                            <div class="heading-line">
+                              <h3 class="heading-style-h1">Turning potential</h3>
+                            </div>
+                            <div class="heading-line">
+                              <div class="heading-element-div">
+                                <div style="width:0rem" class="dotto-block">
+                                  <div data-w-id="4ffb3e8c-1d32-9f35-f291-e426e30ee3af" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="dotto"></div>
+                                </div>
+                                <div style="width:0rem" class="dotto-block">
+                                  <div data-w-id="67d8b029-d2d4-0504-7f66-77952ac57266" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="dotto"></div>
+                                </div>
+                                <div style="width:0rem" class="dotto-block">
+                                  <div data-w-id="5777a8f6-5f6e-8620-1bb0-bddc9af9d8a2" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="dotto"></div>
+                                </div>
+                              </div>
+                              <h3 class="heading-style-h1">into potency</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="max-width-small">
+                        <p class="text-size-regular">Every business has more to offer than meets the eye at first glance. We&#x27;re specialists in spotting opportunities and sharpening your competitive advantage through smart design choices. <br></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="padding-section-large">
+                    <div class="recipe-labels-wrap">
+                      <div class="recipe-labels-div">
+                        <div class="heading-style-h5 labl">[ strategy ]</div>
+                        <div class="heading-style-h5 labl">[ creativity ]</div>
+                        <div class="heading-style-h5 labl">[ technology ]</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-layout-grid home_3_services_component">
+                    <div class="home_3_services_content-left"></div>
+                    <div class="home_3_services_content-right">
+                      <div class="w-layout-grid home_3_services_item-list">
+                        <div id="w-node-a9b2b78a-ab0b-09c9-72d0-ef0dc008a33e-f94db8e2" class="home_3_services_item">
+                          <div class="home_3_services_item-text-wrapper">
+                            <div class="margin-bottom margin-xsmall">
+                              <h6 class="text-size-tiny text-style-allcaps">( our approach )</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="w-node-a9b2b78a-ab0b-09c9-72d0-ef0dc008a343-f94db8e2" class="home_3_services_item">
+                          <div data-w-id="a9b2b78a-ab0b-09c9-72d0-ef0dc008a344" class="home_3_services_item-text-wrapper">
+                            <div class="margin-bottom margin-medium">
+                              <div class="max-width-medium">
+                                <p class="text-size-regular">We believe boring is bad for business. With ever-rising expectations in the digital realm, your brand can’t afford to be mediocre and an OK website is just not going to cut it. <br>We produce premium solutions tailored specifically for the high-value clients you want to keep around. No pre-mixed cookie-cutter nonsense and no overpriced marketing fluff to justify a horrendous agency fee either. Boosted by the newest digital tools, we offer a curated selection of services specifically for the small business needs, delivering everything that you need and nothing that you don&#x27;t.</p>
+                              </div>
+                            </div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="max-width-medium">
+                                <p class="text-size-regular">Fight against the ordinary starts with finding a balance of contrasts and tastes. Our recipe for creating authentic brands starts consists of guiding principles that guarantee your business never gets lost in the noise:</p>
+                              </div>
+                            </div>
+                            <div class="margin-bottom margin-medium">
+                              <div class="home_6_layout_item-list">
+                                <div id="w-node-_853e67e9-5b0c-5e98-27a2-cd7054285178-f94db8e2" class="home_6_layout_item">
+                                  <div class="home_6_layout_item-icon-wrapper">
+                                    <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="home_6_layout_item-text-wrapper">
+                                    <p class="heading-style-h5">Bold but tasteful</p>
+                                  </div>
+                                </div>
+                                <div class="margin-bottom">
+                                  <div class="line-divider"></div>
+                                </div>
+                                <div id="w-node-_853e67e9-5b0c-5e98-27a2-cd7054285180-f94db8e2" class="home_6_layout_item">
+                                  <div class="home_6_layout_item-icon-wrapper">
+                                    <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="home_6_layout_item-text-wrapper">
+                                    <p class="heading-style-h5">Simple yet profound</p>
+                                  </div>
+                                </div>
+                                <div class="margin-bottom">
+                                  <div class="line-divider"></div>
+                                </div>
+                                <div id="w-node-_853e67e9-5b0c-5e98-27a2-cd7054285188-f94db8e2" class="home_6_layout_item">
+                                  <div class="home_6_layout_item-icon-wrapper">
+                                    <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="home_6_layout_item-text-wrapper">
+                                    <p class="heading-style-h5">Premium, without pretentious</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-layout-grid home_6_layout_component">
+                    <div class="home_6_layout_content-left">
+                      <div class="margin-bottom margin-xsmall">
+                        <div class="text-size-tiny text-style-allcaps"> ( our approach)</div>
+                        <div class="margin-bottom margin-small">
+                          <h2 class="heading-style-h1">Premium, without<br>pretentious</h2>
+                        </div>
+                      </div>
+                      <div class="margin-bottom margin-small">
+                        <p class="text-size-medium">Lead with authenticity. Full of character. Be bold and ?? Finding joy in excellence (requires special partners?)<br>We distill the finest aspects of your brand&#x27;s potential to crate potent mix of digital craftsmanship. <br>We believe boring is bad for business. With neverending competititon for the BEST customers, your brand can’t afford to be mediocre. OK website is not good enough to be remembered. We produce only the high-end solutions tailored specifically for the clientele you want to keep around. No pre-mixed cookie-cutter nonsense and no overpriced marketing fluff to justify a horrendous agency fee either. We understand the requirements of small business and startups. Get everything that you need and nothing that you don&#x27;y. Delight customers and explode your business with bold but tasteful digital mastery.<br></p>
+                      </div>
+                      <div class="margin-top margin-medium"></div>
+                    </div>
+                    <div class="home_6_layout_content-right">
+                      <div class="margin-bottom margin-small"></div>
+                    </div>
+                  </div>
+                  <div class="w-layout-grid home_6_layout_component">
+                    <div class="home_6_layout_content-left">
+                      <div class="margin-top margin-medium"></div>
+                    </div>
+                    <div class="home_6_layout_content-right">
+                      <div class="home_6_layout_item-list">
+                        <div class="margin-bottom margin-small">
+                          <div class="max-width-small">
+                            <p class="text-size-medium"><br>Fight against the ordinary based in balance of contrasts and tastes. Premium brands lead with authenticity. We craft custom solutions that never get lost in the noise. Strategy, creativity and technology, perfectly blended to achieve sophisticated work that&#x27;s beautiful as it is functional.<br>excellene takes time and thought. [recipe] Some of our favourite guiding notes (philosophy) include:<br>‍<br></p>
+                          </div>
+                        </div>
+                        <div id="w-node-_9781e630-3bb5-9b67-0f3d-5bbafaf97450-f94db8e2" class="home_6_layout_item">
+                          <div class="home_6_layout_item-icon-wrapper">
+                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
+                          <div class="home_6_layout_item-text-wrapper">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                          </div>
+                        </div>
+                        <div class="margin-bottom">
+                          <div class="line-divider"></div>
+                        </div>
+                        <div id="w-node-_9781e630-3bb5-9b67-0f3d-5bbafaf97456-f94db8e2" class="home_6_layout_item">
+                          <div class="home_6_layout_item-icon-wrapper">
+                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
+                          <div class="home_6_layout_item-text-wrapper">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                          </div>
+                        </div>
+                        <div class="margin-bottom">
+                          <div class="line-divider"></div>
+                        </div>
+                        <div id="w-node-_9781e630-3bb5-9b67-0f3d-5bbafaf9745c-f94db8e2" class="home_6_layout_item">
+                          <div class="home_6_layout_item-icon-wrapper">
+                            <div class="icon-embed-xsmall w-embed"><svg width="currentWidth" height="currentHeight" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
+                          <div class="home_6_layout_item-text-wrapper">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section_home_7_about">
+            <div class="timeline-1-instructions-delete">
+              <div class="container-small">
+                <div class="margin-bottom margin-xxsmall">
+                  <div class="text-size-medium text-weight-bold">Follow these instructions to make this component work seamlessly with other components on your website:</div>
+                </div>
+                <div class="margin-bottom margin-xxsmall">
+                  <div>1. Add a background color to the section div above this Timeline section.</div>
+                </div>
+                <ol role="list" class="home_7_about_instructions-list">
+                  <li class="home_7_about_instructions-list-item">2. Add the z-index-2 class to the section div above this Timeline section.</li>
+                  <li class="home_7_about_instructions-list-item">This will ensure that the overflowing progress line from the Timeline section below is hidden underneath it.</li>
+                </ol>
+              </div>
+            </div>
+            <div class="padding-global">
+              <div class="container-large">
+                <div class="padding-section-large">
+                  <div class="w-layout-grid home_7_about_component">
+                    <div class="home_7_about_content-left">
+                      <div class="margin-bottom margin-xsmall">
+                        <div class="text-weight-semibold">process</div>
+                      </div>
+                      <div class="margin-bottom margin-small">
+                        <h2>3d</h2>
+                      </div>
+                      <p class="text-size-medium">At Aperitif, we are passionate about creating stunning websites that not only captivate your audience but also drive real business growth. With our expertise in web design and development, we deliver exceptional online experiences that leave a lasting impression.</p>
+                      <div class="margin-top margin-medium">
+                        <div class="button-group">
+                          <a href="#" class="button is-secondary w-button">Learn More</a>
+                          <a href="#" class="button is-link is-icon w-inline-block">
+                            <div>Get Started</div>
+                            <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                              </svg></div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="w-node-bdaa4596-dfb2-63d9-4a09-d7a5dcaa9354-f94db8e2" class="home_7_about_progress">
+                      <div class="home_7_about_fade-overlay-top"></div>
+                      <div class="home_7_about_progress-line"></div>
+                      <div class="home_7_about_line"></div>
+                      <div class="home_7_about_fade-overlay-bottom"></div>
+                      <div class="home_7_about_progress-line-cover"></div>
+                    </div>
+                    <div class="home_7_about_content-right">
+                      <div class="home_7_about_row">
+                        <div class="home_7_about_circle-wrapper">
+                          <div class="home_7_about_circle"></div>
+                        </div>
+                        <div class="home_7_about_item">
+                          <div class="margin-bottom margin-xsmall">
+                            <h3>Jan 2022</h3>
+                          </div>
+                          <div class="margin-bottom margin-xsmall">
+                            <h4 class="heading-style-h5">Website Redesign Project</h4>
+                          </div>
+                          <p class="text-size-regular">We worked closely with XYZ Corp to revamp their outdated website and create a modern, user-friendly interface that showcases their products and services.</p>
+                          <div class="margin-top margin-medium">
+                            <div class="button-group">
+                              <a href="#" class="button is-secondary w-button">Learn More</a>
+                              <a href="#" class="button is-link is-icon w-inline-block">
+                                <div>Get Started</div>
+                                <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                                  </svg></div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="home_7_about_row">
+                        <div class="home_7_about_circle-wrapper">
+                          <div class="home_7_about_circle"></div>
+                        </div>
+                        <div class="home_7_about_item">
+                          <div class="margin-bottom margin-xsmall">
+                            <h3>Mar 2022</h3>
+                          </div>
+                          <div class="margin-bottom margin-xsmall">
+                            <h4 class="heading-style-h5">E-commerce Development</h4>
+                          </div>
+                          <p class="text-size-regular">We helped ABC Co launch their online store, implementing robust e-commerce features that streamline the buying process and increase conversions.</p>
+                          <div class="margin-top margin-medium">
+                            <div class="button-group">
+                              <a href="#" class="button is-secondary w-button">Learn More</a>
+                              <a href="#" class="button is-link is-icon w-inline-block">
+                                <div>Get Started</div>
+                                <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                                  </svg></div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="home_7_about_row">
+                        <div class="home_7_about_circle-wrapper">
+                          <div class="home_7_about_circle"></div>
+                        </div>
+                        <div class="home_7_about_item">
+                          <div class="margin-bottom margin-xsmall">
+                            <h3>May 2022</h3>
+                          </div>
+                          <div class="margin-bottom margin-xsmall">
+                            <h4 class="heading-style-h5">Mobile App Design</h4>
+                          </div>
+                          <p class="text-size-regular">We collaborated with DEF Inc to design a visually stunning mobile app that provides a seamless user experience and drives user engagement.</p>
+                          <div class="margin-top margin-medium">
+                            <div class="button-group">
+                              <a href="#" class="button is-secondary w-button">Learn More</a>
+                              <a href="#" class="button is-link is-icon w-inline-block">
+                                <div>Get Started</div>
+                                <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                                  </svg></div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="home_7_about_row">
+                        <div class="home_7_about_circle-wrapper">
+                          <div class="home_7_about_circle"></div>
+                        </div>
+                        <div class="home_7_about_item">
+                          <div class="margin-bottom margin-xsmall">
+                            <h3>Jul 2022</h3>
+                          </div>
+                          <div class="margin-bottom margin-xsmall">
+                            <h4 class="heading-style-h5">SEO Optimization</h4>
+                          </div>
+                          <p>We optimized GHI Corp&#x27;s website for search engines, improving their organic rankings and driving targeted traffic to their site.</p>
+                          <div class="margin-top margin-medium">
+                            <div class="button-group">
+                              <a href="#" class="button is-secondary w-button">Learn More</a>
+                              <a href="#" class="button is-link is-icon w-inline-block">
+                                <div>Get Started</div>
+                                <div class="icon-embed-xxsmall w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                                  </svg></div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section_home_8_cta">
+            <div class="padding-global">
+              <div class="container-small">
+                <div class="padding-section-large">
+                  <div class="cta-gif-div"><img src="images/icons8-champagne.gif" loading="lazy" alt="" class="image-3"></div>
+                  <div class="text-align-center">
+                    <div class="margin-bottom margin-small">
+                      <div class="heading-div center w-clearfix">
+                        <div class="heading-line">
+                          <h2 class="heading-style-h1">Here&#x27;s to <br></h2>
+                        </div>
+                        <div class="changer-overflow">
+                          <div class="changer-move">
+                            <div class="changer">the new beginnings</div>
+                            <div class="changer">your idea</div>
+                            <div class="changer">a good time</div>
+                            <div class="changer">the new beginnings</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-size-medium">Book a 20-min consultation. It’s on us!</p>
+                    <div class="margin-top margin-medium">
+                      <div class="button-wrap center">
+                        <a href="mailto:hello@aperitifstudio.com?subject=hi!" class="button-2 is-icon dark-outline w-inline-block">
+                          <div class="clip">
+                            <div class="button-text">
+                              <div class="text-size-small">Get in touch</div>
+                            </div>
+                            <div class="button-text button-text-bottom">
+                              <div class="text-size-small">Get in touch </div>
+                            </div>
+                          </div>
+                          <div class="clip">
+                            <div class="button-icon"><img src="images/Right-arrow-slant---dark.svg" loading="lazy" alt="" class="icon-1x1-tiny"></div>
+                            <div class="button-icon button-icon-bottom"><img src="images/Right-arrow-slant---dark.svg" loading="lazy" alt="" class="icon-1x1-tiny"></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <div class="footer-wrap-main">
+          <div class="footer-wrap">
+            <footer class="footer">
+              <div class="aperitif-label footr"><img src="images/labelaperitif.svg" loading="lazy" alt="">
+                <a href="index.html" aria-current="page" class="home-label w-inline-block w--current"></a>
+              </div>
+              <div class="padding-global">
+                <div class="max-width-full">
+                  <div class="padding-vertical padding-xxlarge footer">
+                    <div class="footer-split">
+                      <div class="padding-bottom padding-xxlarge">
+                        <div class="w-layout-grid footer3_top-wrapper">
+                          <div id="w-node-bdaa4596-dfb2-63d9-4a09-d7a5dcaa93e0-f94db8e2" class="w-layout-grid footer3_menu-wrapper">
+                            <div class="footer3_link-list foortr">
+                              <div class="margin-bottom margin-medium"></div>
+                            </div>
+                            <div class="footer3_link-list">
+                              <a href="#" class="button-4 w-inline-block">
+                                <div class="overflow-hidden">
+                                  <div class="text-size-small text-style-allcaps">Home</div>
+                                </div>
+                                <div class="button_underline-wrapper">
+                                  <div class="button_underline"></div>
+                                </div>
+                              </a>
+                              <a href="#" class="button-4 w-inline-block">
+                                <div class="overflow-hidden">
+                                  <div class="text-size-small text-style-allcaps">Services</div>
+                                </div>
+                                <div class="button_underline-wrapper">
+                                  <div class="button_underline"></div>
+                                </div>
+                              </a>
+                              <a href="#" class="button-4 w-inline-block">
+                                <div class="overflow-hidden">
+                                  <div class="text-size-small text-style-allcaps">About</div>
+                                </div>
+                                <div class="button_underline-wrapper">
+                                  <div class="button_underline"></div>
+                                </div>
+                              </a>
+                              <a href="#" class="button-4 w-inline-block">
+                                <div class="overflow-hidden">
+                                  <div class="text-size-small text-style-allcaps">Contact</div>
+                                </div>
+                                <div class="button_underline-wrapper">
+                                  <div class="button_underline"></div>
+                                </div>
+                              </a>
+                            </div>
+                            <div id="w-node-b89c1a46-dc1c-db9b-28a9-b44f94a9adde-f94db8e2" class="footer3_link-list">
+                              <div class="margin-bottom">
+                                <div class="text-size-small text-style-allcaps">71-75 shelton street<br>covent garden, wc2h9jq, <br>london, uk</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="w-node-bdaa4596-dfb2-63d9-4a09-d7a5dcaa93c1-f94db8e2" class="footer3_left-wrapper">
+                            <div class="margin-bottom margin-medium">
+                              <div class="footer3_details-wrapper">
+                                <div class="margin-bottom margin-tiny">
+                                  <a href="#" class="button-4 footr w-inline-block">
+                                    <div class="overflow-hidden">
+                                      <div class="heading-style-h3 text-style-allcaps footr">hello@aperitifstudio.com</div>
+                                    </div>
+                                    <div class="button_underline-wrapper">
+                                      <div class="button_underline"></div>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="label-wrap footer">
+                              <div class="text-size-tiny text-style-allcaps">london, UK</div>
+                              <div data-clock="CET" class="text-size-tiny text-style-allcaps">00:00:00</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="footer3_bottom-wrapper">
+                        <div class="footer3_credit-text">© 2024 Apéritif. All rights reserved.</div>
+                        <div class="drink-gif"><img src="images/bubble-gum-cocktail.gif" loading="lazy" alt="" class="drinkie"></div>
+                        <div class="w-layout-grid footer3_legal-list">
+                          <a href="#" class="footer3_legal-link">Privacy Policy</a>
+                          <a href="#" class="footer3_legal-link">Terms of Service</a>
+                          <a href="#" class="footer3_legal-link">Cookies Settings</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+          <div data-w-id="9a39fa67-861d-7330-bd72-5acdd570ff88" class="footer-scroll"></div>
+        </div>
+        <div class="cursor">
+          <div class="cursor_dot"></div>
+        </div>
+      </div>
+    </main>
+    <div style="display:flex" class="load-swipe">
+      <div class="overflow-hidden-2">
+        <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="loading one">WELCOME</div>
+      </div>
+      <div style="display:none" class="loading four">welcome</div>
+      <div style="display:none" class="loading three">cheers!</div>
+      <div style="display:none" class="loading two">welcome</div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=65ef8789ab957ccef94db869" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11dbb8d3a0d3f7fa83cc_three.min.txt"></script>
+  <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11dab8d3a0a088fa83c8_TweenLite.min.txt"></script>
+  <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11daf8881a5af4531765_Math.txt"></script>
+  <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11dac28723d0da3279a6_EffectShell.txt"></script>
+  <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11dac28723c0ec32799f_StretchEffect.txt"></script>
+  <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11f6c287237662327a19_imagesloaded.pkgd.txt"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
+  <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+  <script src="https://kmn2x.csb.app/clock.js"></script>
+  <script>
+gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', () => {
+  // Define the marquee animation with a normal speed for the first marquee
+  const marqueeSpeed = 50; // Normal duration of one cycle of the marquee
+  const marquee = gsap.to('.showcase_marquee_list', {
+    x: () => -document.querySelector('.showcase_marquee_list').offsetWidth,
+    ease: "none",
+    duration: marqueeSpeed,
+    repeat: -1, // infinite loop
+    paused: true // Start paused so we can control playback with scroll
+  });
+  // Define the reverse marquee animation
+  const reverseMarquee = gsap.to('.reverse', {
+    x: () => document.querySelector('.reverse').offsetWidth,
+    ease: "none",
+    duration: marqueeSpeed, // Use the same speed for consistency or adjust as needed
+    repeat: -1, // infinite loop
+    paused: true // Start paused so we can control playback with scroll
+  });
+  // Function to accelerate marquee based on scroll
+  function accelerateMarquee(marqueeObject, accelAmount = 0.25) {
+    let isScrolling;
+    window.addEventListener('scroll', () => {
+      marqueeObject.play(); // Ensure the animation is playing
+      marqueeObject.timeScale(Math.min(3, marqueeObject.timeScale() + accelAmount)); // Accelerate, maxing out at 3x speed
+      // Detect when user stops scrolling
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        // Gradually return to normal speed when scrolling stops
+        gsap.to(marqueeObject, {
+          timeScale: 1,
+          duration: 0.1, // Duration to return to normal speed
+          ease: "none"
+        });
+      }, 66); // Adjusted back to 66ms for smoother detection
+    });
+  }
+  // Accelerate both marquees based on scroll
+  accelerateMarquee(marquee, 0.25); // Acceleration for the first marquee
+  accelerateMarquee(reverseMarquee, 0.15); // Acceleration for the reverse marquee
+  // Initial start of both marquees at normal speed
+  marquee.play();
+  reverseMarquee.play();
+});
+</script>
+  <script>
+const lenis = new Lenis({
+  lerp: 0.05,
+	direction: 'vertical', 
+  smooth: true,
+  smoothTouch: false,
+  mouseMultiplier: 1.2,
+  smoothWheel: true,
+  normalizeWheel: true
+})
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)
+</script>
+  <script>
+    const container = document.body
+    const itemsWrapper = document.querySelector('.grid')
+    // Preload images
+    const preloadImages = () => {
+        return new Promise((resolve, reject) => {
+            imagesLoaded(document.querySelectorAll('img'), resolve);
+        });
+    };
+    // And then..
+    preloadImages().then(() => {
+        // Remove the loader
+        document.body.classList.remove('loading');
+        const effect = new StretchEffect(container, itemsWrapper)
+	});
+</script>
+  <script>
+/* 
+Version 2.0 - Added config! 
+- select multiples with selector option
+- toggle the display of seconds with hasSeconds
+*/
+new Clock(); // defaults to the first data-clock in the DOM with EST timezone
+</script>
+</body>
+</html>
